@@ -2,28 +2,56 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="104.8923mm"
+   height="89.629936mm"
+   viewBox="0 0 104.89229 89.629937"
    version="1.1"
    id="svg5"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview834"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.55678311"
+     inkscape:cx="283.77298"
+     inkscape:cy="505.58287"
+     inkscape:window-width="1323"
+     inkscape:window-height="1003"
+     inkscape:window-x="57"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
   <defs
      id="defs2" />
   <g
-     id="layer1">
+     id="layer1"
+     transform="translate(-16.135998,-14.710402)">
     <circle
        style="fill:#53676c;fill-opacity:1;stroke-width:0.264583"
        id="path972"
-       cx="41.223598"
-       cy="24.235201"
+       cx="35.521198"
+       cy="24.710402"
        r="10" />
     <circle
        style="fill:#53676c;fill-opacity:1;stroke-width:0.264583"
        id="path972-7"
-       cx="48.470398"
-       cy="57.023998"
+       cx="47.0448"
+       cy="51.796799"
        r="10" />
     <circle
        style="fill:#53676c;fill-opacity:1;stroke-width:0.264583"
@@ -40,17 +68,17 @@
     <circle
        style="fill:#4b86b4;fill-opacity:1;stroke-width:0.264583"
        id="path972-3-5"
-       cx="89.337601"
-       cy="42.767998"
+       cx="91.238403"
+       cy="46.094398"
        r="10" />
     <circle
        style="fill:#4b86b4;fill-opacity:1;stroke-width:0.264583"
        id="path972-3-0"
-       cx="113.3352"
-       cy="47.52"
+       cx="105.25681"
+       cy="78.883202"
        r="10" />
     <path
-       style="fill:none;stroke:#ff6600;stroke-width:4.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:none;stroke:#ff6600;stroke-width:4.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 26.14032,102.15391 C 38.13232,99.241199 54.536525,91.049531 61.022341,78.085945 70.24806,65.972411 65.849844,39.425401 76.81393,28.843046 c 9.71304,-9.184959 30.88465,-10.004218 43.03365,-2.514827"
        id="path1687" />
   </g>
