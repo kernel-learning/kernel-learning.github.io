@@ -68,7 +68,7 @@
          		Statistical learning is about the construction and study of systems that can automatically learn from data. With the emergence of massive datasets commonly encountered today, the need for powerful machine learning is of acute importance. Examples of successful applications include effective web search, anti-spam software, computer vision, robotics, practical speech recognition, and a deeper understanding of the human genome. 
          	</p>
          	<p>
-         		This course gives an introduction to this exciting field. In the first part, we will introduce basic techniques such as logistic regression, multilayer perceptrons, nearest neighbor approaches, both from a theoretical and methodological point of views. In the second part, we will focus on more advanced techniques such as kernel methods, which is a versatile tool to represent data, in combination with (un)supervised learning techniques that are agnostic to the type of data that is learned from. The learning techniques that will be covered include regression, classification, clustering and dimension reduction. We will cover both the theoretical underpinnings of kernels, as well as a series of kernels that are important in practical applications. Finally we will touch upon topics of active research, such as large-scale kernel methods and the use of kernel methods to develop theoretical foundations of deep learning models.
+         		This course gives an introduction to this exciting field. In the first part, we will introduce basic techniques such as linear regression, logistic regression, multilayer perceptrons, nearest neighbor approaches, both from a theoretical and methodological point of views. In the second part, we will focus on more advanced techniques such as kernel methods, which is a versatile tool to represent data, in combination with (un)supervised learning techniques that are agnostic to the type of data that is learned from. The learning techniques that will be covered include regression, classification, clustering and dimension reduction. We will cover both the theoretical underpinnings of kernels, as well as a series of kernels that are important in practical applications. Finally we will touch upon topics of active research, such as large-scale kernel methods and the use of kernel methods to develop theoretical foundations of deep learning models.
           	</p>
           	</br>
       		<h4 class="display-5 mb-3">Evaluation</h4>
@@ -79,20 +79,20 @@
           	<h4 class="display-5 mb-3">Reading material</h4>
           	<p>
           	<ul>
+				<li><a href="https://www.di.ens.fr/~fbach/ltfp_book.pdf">Francis Bach, Learning Theory from First Principles, 2023.</a></li>
           		<li>Vapnik, The nature of statistical learning theory. Springer.</li>
 				<li>Hastie, Tibshirani, Friedman, The elements of statistical learning. (free online).</li>
 				<li>Shawe-Taylor, Cristianini. Kernel methods for pattern analysis. 2004.</li>
-				<li><a href="https://www.di.ens.fr/~fbach/ltfp_book.pdf">Francis Bach, Learning Theory from First Principles, 2023.</a></li>
 			</ul>
 			</p>
 		<h4 class="display-5 mb-3">Optional exercises (ungraded)</h4>
          	<p>
-         		Addtional exercises can be found in this <a href="docs/exercices.pdf">booklet</a>.
+         		Addtional exercises (on kernel learning) can be found in this <a href="docs/exercices.pdf">booklet</a>.
           	</p>
 
 		<h4 class="display-5 mb-3">Final exam</h4>
          	<p>
-         		The final exam will take place in January 2025 and will last 2 hours (the location and precise date is to be confirmed). 
+         		The final exam will take place some day between the 26th of January 2026 and 4th of February 2026, it will last 2 hours (the location and precise date is to be confirmed). 
 			You are allowed to bring one single A4 sheet of handwritten notes. 
           	</p>
 
@@ -114,9 +114,9 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
         	<p>
-			Lectures are scheduled from 9:45 to 11:15 on Mondays and from 8:15 to 9:45 on Thursdays.
+			Lectures are scheduled from 2pm to 5pm on Tuesdays. <b>Please bring your laptop as their will sometimes be coding exercises.</b>
 			
-			The first part of the class will recap basic supervised learning techniques, theory, and algorithms. Lecture notes or slides will be updated here on the fly.
+			The first part of the class will recap basic supervised learning techniques, theory, and algorithms. Lecture notes and/or slides will be updated here on the fly.
 			</p>
 			<p>
 				You can download the <a href="docs/slides_kernels.pdf">slides for all lectures of the second part of the class (advanced kernel methods) here</a>! Each lecture corresponds to a range of slides. Slides are frequently updated. Please let us know if you spot typos!
@@ -124,38 +124,43 @@
 
         	<p>
         	<strong>Homework 1.</strong>
-			The first <a href="docs/homework_basicML_2024-25.pdf">homework</a> is due by  <b>Friday, November 22, 2024</b>. The report can be written in English or in French. It is to be uploaded using the form <a href="http://pierre.gaillard.me/teaching/kernel_mosig_2024.php">here</a> as a pdf report and a code file (.py or .ipynb). If the upload does not succeed (for some reason), send an email to 
+			The first homeworl will be due <b>TBD (some date end of November)</b>. The report can be written in English or in French. It is to be uploaded using the form <a href="http://pierre.gaillard.me/teaching/kernel_mosig_2024.php">here</a> as a pdf report and a code file (.py or .ipynb). If the upload does not succeed (for some reason), send an email to 
 			<script>
-              document.write("<n uers=\"znvygb:cvreer.tnvyyneq@vaevn.se\" ery=\"absbyybj\">cvreer.tnvyyneq@vaevn.se</n>".replace(/[a-zA-Z]/g,
-                function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
-              </script> but only after you have tried the upload.
+				document.write("<n uers=\"znvygb:fpbgg.crfzr@vaevn.se\" ery=\"absbyybj\">fpbgg.crfzr@vaevn.se</n>"
+					.replace(/[a-zA-Z]/g, function(c){
+					return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);
+					}));
+				</script> but only after you have tried the upload.
 			<br/>
 			</p>
 
         	<p>
         	<strong>Homework 2.</strong>
-			The second <a href="docs/Homework2.zip">homework</a> is due by  <b> January 19, 2025</b> at 09:00AM. 
+			The second homework will be due around mid-Janueary 2026.
 			Students must submit a single PDF to the <a href="https://www.gradescope.com">GradeScope</a> plateform. Please follow the <a href="docs/general_instructions.pdf">instructions</a> to create an account on GradeScope and to submit the homework.  
 			To access the course plateform you need to provide the following Course entry code: VD2JWN. 
-			For questions about the Homework please send an email to "michael.arbel@inria.fr", the object of the email must start with the course entry code.
+			For questions about the Homework please send an email to 
+			<script>
+				document.write("<n uers=\"znvygb:zvpunry.neqry@vaevn.se\" ery=\"absbyybj\">zvpunry.neory@vaevn.se</n>"
+					.replace(/[a-zA-Z]/g, function(c){
+					return String.fromCharCode((c<='Z'?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);
+					}));
+				</script> , the object of the email must start with the course entry code.
 			<br/>
 			</p>
-		
         	<p>
-        	<!-- <strong>Homework 2.</strong>
-			The second  <a href="">homework</a> is due by  <b>Thursday, January 10, 2025</b> at 23:59PM.
-			Students must submit a single PDF to the <a href="https://www.gradescope.com">GradeScope</a> plateform. Please follow the <a href="docs/general_instructions.pdf">instructions</a> to create an account on GradeScope and to submit the homework.  
-			To access the course plateform you need to provide the following Course entry code: WBK2JJ.
-			For questions about the Homework please send an email to "michael.arbel@inria.fr", the object of the email must start with the course entry code.  
-			<br/>
-			<br/>
-			</p>
-
-			<p>
+					<!-- If you want to hide the old block, keep it inside ONE well-formed comment:
+				<p>
+				<strong>Homework 2.</strong>
+				The second <a href="">homework</a> is due by <b>Thursday, January 10, 2025</b> at 23:59PM.
+				Students must submit a single PDF to the <a href="https://www.gradescope.com">GradeScope</a> platform.
+				Please follow the <a href="docs/general_instructions.pdf">instructions</a>…
+				For questions about the Homework please send an email to "michael.arbel@inria.fr".
+				</p>
+				<p>
 				<strong>Previous exams: </strong> <a href="docs/ExamKernelLearningMOSIG_2022-23.pdf">2023</a>.
-			</p>
-		-->
-			
+				</p>
+				-->
 			<table class="table table-hover table-sm table-striped">
 			  <thead>
 			    <tr>
@@ -169,192 +174,203 @@
 			  <tbody>
 			    <tr>
 			      <th scope="row">1</th>
+			      <td>23/09/2025</td>
+			      <td>A022</td>
+			      <td>SP</td>
+			      <!-- <td><a href="docs/lesson1_supervised_learning_basics.pdf">Supervised learning basics</a></td> -->
+				  <td><a href="docs/intro.pdf">Introduction</a></td>
+			    </tr>
+			    <tr>
+			    	<th scope="row">1bis</th>
 			      <td>23/09/2024</td>
-			      <td>C008</td>
-			      <td>PG</td>
-			      <td><a href="docs/lesson1_supervised_learning_basics.pdf">Supervised learning basics</a></td>
+			      <td>A022</td>
+			      <td>SP</td>
+			      <!-- <td><a href="docs/lecture_notes_basic_models.pdf#page=3">Linear regression (beginning)</a></td> -->
+				  <td> Supervised learning basics </td>
 			    </tr>
 			    <tr>
 			    	<th scope="row">2</th>
-			      <td>26/09/2024</td>
-			      <td>C008</td>
-			      <td>PG</td>
-			      <td><a href="docs/lecture_notes_basic_models.pdf#page=3">Linear regression</a></td>
+			      <td>30/09/2025</td>
+			      <td>H206</td>
+			      <td>SP</td>
+			      <!-- <td><a href="docs/lecture_notes_basic_models.pdf#page=3">Linear regression</a> <a href="docs/exercise2.1-solution.pdf">(solution exercise 2.1)</a></td> -->
+				   <td>  Linear regression </td> 
+			    </tr>
+			    <tr>
+			      <th scope="row">2bis</th>
+			      <td>30/09/2025</td>
+			      <td>H206</td>
+			      <td>SP</td>
+			      <!-- <td><a href="docs/lecture_notes_basic_models.pdf#page=11">Logistic regression</a></td> -->
+				   <td>  Linear regression (notebook) </td> 
 			    </tr>
 			    <tr>
 			    	<th scope="row">3</th>
-			      <td>30/09/2024</td>
-			      <td>C008</td>
-			      <td>MA</td>
-			      <td><a href="docs/lecture_notes_basic_models.pdf#page=3">Linear regression</a> <a href="docs/exercise2.1-solution.pdf">(solution exercise 2.1)</a></td>
+			      <td>07/10/2025</td>
+			      <td style="white-space: nowrap;">Amphi H</td>
+			      <td>SP</td>
+			      <!-- <td><a href="docs/lecture_notes_basic_models.pdf#page=11">Maximum likelihood</a> <a href="docs/gaussian_mixture_example.ipynb">(notebook)</td> -->
+					<td>  Logistic regression </td> 
 			    </tr>
 			    <tr>
-			      <th scope="row">4</th>
-			      <td>03/10/2024</td>
-			      <td>C010</td>
-			      <td>MA</td>
-			      <td><a href="docs/lecture_notes_basic_models.pdf#page=11">Logistic regression</a></td>
+				<th scope="row">3bis</th>
+			      <td>07/10/2024</td>
+			      <td style="white-space: nowrap;">Amphi H</td>
+			      <td>SP</td>
+			      <td>  Logistic regression (notebook) </td> 
+			    </tr>
+			    <tr>
+			    	<th scope="row">4</th>
+			      <td>14/10/2024</td>
+			      <td>H206</td>
+			      <td>SP</td>
+				  <td>Unsupervised learning</td>
+			      <!-- <td><a href="docs/lecture_notes_basic_models.pdf#page=18">K-Nearest Neighbors</a></td> -->
+			    </tr>
+			    <tr>
+			    	<th scope="row">4bis</th>
+			      <td>14/10/2024</td>
+			      <td>H206</td>
+			      <td>SP</td>
+				  <td>Unsupervised learning (notebook) </td>
+			      <!-- <td><a href="docs/lecture_notes_basic_models.pdf#page=29">Lasso</a></a></td> -->
 			    </tr>
 			    <tr>
 			    	<th scope="row">5</th>
-			      <td>07/10/2024</td>
-			      <td>C003</td>
-			      <td>PG</td>
-			      <td><a href="docs/lecture_notes_basic_models.pdf#page=11">Maximum likelihood</a> <a href="docs/gaussian_mixture_example.ipynb">(notebook)</td>
-			    </tr>
-			    <tr>
-				<th scope="row"></th>
-			      <td>10/10/2024</td>
-			      <td></td>
-			      <td></td>
-			      <td><strong>No Class</strong></td>
-			    </tr>
-			    <tr>
-			    	<th scope="row">6</th>
-			      <td>14/10/2024</td>
-			      <td>C003</td>
-			      <td>PG</td>
-			      <td><a href="docs/lecture_notes_basic_models.pdf#page=18">K-Nearest Neighbors</a></td>
-			    </tr>
-			    <tr>
-			    	<th scope="row">7</th>
-			      <td>17/10/2024</td>
-			      <td>C010</td>
-			      <td>PG</td>
-			      <td><a href="docs/lecture_notes_basic_models.pdf#page=29">Lasso</a></a></td>
-			    </tr>
-			    <tr>
-			    	<th scope="row">8</th>
 			      <td>21/10/2024</td>
-			      <td>H101</td>
-			      <td>PG</td>
-			      <td><a href="docs/lecture_notes_basic_models.pdf#page=37">Multilayer Perceptrons</a></td>
+			      <td>Amphi E</td>
+			      <td> </td>
+				  <td></td>
+			      <!-- <td><a href="docs/lecture_notes_basic_models.pdf#page=37">Multilayer Perceptrons</a></td> -->
 			    </tr>
 			    <tr>
-			    	<th scope="row">9</th>
-			      <td>24/10/2024</td>
-			      <td>C010</td>
-			      <td>JM</td>
-			      <td><a href="docs/slides_kernels.pdf#page=1">Positive definite kernels and RKHS, slides 1-30</a> 
+			    	<th scope="row">5bis</th>
+			      <td>21/10/2024</td>
+			      <td>Amphi E</td>
+			      <td> </td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=1">Positive definite kernels and RKHS, slides 1-30</a>  -->
 			      	<!-- <a href="docs/homework1.pdf">(Homework 1)</a> -->
 			      </td>
 			    </tr>
 			    <tr>
-			    	<th scope="row">10</th>
+			    	<th scope="row">6</th>
 			      <td>04/11/2024</td>
-			      <td>C009</td>
-			      <td>JM</td>
-			      <td><a href="docs/slides_kernels.pdf#page=46">RKHSs, slides 31-47</a></td>
+			      <td>Amphi H</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=46">RKHSs, slides 31-47</a></td> -->
 			    </tr>
 			    <tr>
-			    	<th scope="row">11</th>
-			      <td>07/11/2024</td>
-			      <td>online</td>
-			      <td>JM (online)</td>
-			      <td><a href="docs/slides_kernels.pdf#page=56">Smoothness functional, kernel tricks, Slides 48-61</a> <br> (1) Try to do the quizz on slide 48 <br> 
-			      (2) Watch the last 7 minutes of this <a href="https://www.youtube.com/watch?v=pK4LWasnh8A&feature=youtu.be">video</a>. <br>
-			      (3) Watch the first 16 minutes of this <a href="https://www.youtube.com/watch?v=Ra06l4fqlSU&feature=youtu.be">video</a>. <br>
-			      (4) Interactive session will be at 9am on Zoom, id meeting 937 8058 5239</a> using the password given during the class.
-			      </td>
+			    	<th scope="row">6bis</th>
+			      <td>04/11/2024</td>
+			      <td>Amphi H</td>
+			      <td></td>
+			      <td> </td>
 			    </tr>
 			    <tr>
-			    	<th scope="row">12</th>
-			      <td>14/11/2024</td>
-			      <td>C010</td>
-			      <td>PG</td>
-			      <td><a href="docs/slides_kernels.pdf#page=92">Kernel tricks, Representer Theorem, and KRR, slides 62-92</a></td>
-			    </tr>
-			    <tr>
-			    	<th scope="row">13</th>
+			    	<th scope="row">7</th>
 			      <td>18/11/2024</td>
-			      <td>C010</td>
-			      <td>PG</td>
-			      <td><a href="docs/slides_kernels.pdf#page=129">KRR, WKRR, KLR, slides 93-111</a></td>
+			      <td>H105</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=92">Kernel tricks, Representer Theorem, and KRR, slides 62-92</a></td> -->
 			    </tr>
 			    <tr>
-			    <th scope="row">14</th>
-			      <td>21/11/2024</td>
-			      <td>C010</td>
-			      <td>MA</td>
-			      <td><a href="docs/slides_kernels.pdf#page=112">Large-margin classifiers, slides 112-129</a>
+			    	<th scope="row">7bis</th>
+			      <td>18/11/2024</td>
+			      <td>H105</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=129">KRR, WKRR, KLR, slides 93-111</a></td> -->
+			    </tr>
+			    <tr>
+			    <th scope="row">8</th>
+			      <td>25/11/2024</td>
+			      <td>H206</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=112">Large-margin classifiers, slides 112-129</a> -->
 			      <td>
 			    </tr>
 			    <tr>
-			    	<th scope="row">15</th>
+			    	<th scope="row">8bis</th>
 			      <td>25/11/2024</td>
-			      <td>C010</td>
-			      <td>MA</td>
-			      <td><a href="docs/slides_kernels.pdf#page=130">Support vector machines, slides 130-162</a></td>
+			      <td>H206</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=130">Support vector machines, slides 130-162</a></td> -->
 			    </tr>
 			    <tr>
-			    	<th scope="row">16</th>
-			      <td>28/11/2024</td>
-			      <td>C010</td>
-			      <td>MA</td>
-			      <td><a href="docs/slides_kernels.pdf#page=163">Kernel PCA, slides 163-178</a></td>
-			    </tr>
-			    <tr>
-			    	<th scope="row">17</th>
+			    	<th scope="row">9</th>
 			      <td>02/12/2024</td>
-			      <td>C010</td>
-			      <td>JM</td>
-			      <td><a href="docs/slides_kernels.pdf#page=179">Kernel K-means, kernel CCA, slides 179-199</a></td>
+			      <td>A022</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=163">Kernel PCA, slides 163-178</a></td> -->
 			    </tr>
 			    <tr>
-			    	<th scope="row">18</th>
-			      <td>05/12/2024</td>
-			      <td>C010</td>
-			      <td>MA</td>
-			      <td><a href="docs/slides_kernels.pdf#page=217">Mercer kernels, slides 217-264</a></td>
+			    	<th scope="row">9bis</th>
+			      <td>02/12/2024</td>
+			      <td>A022</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=179">Kernel K-means, kernel CCA, slides 179-199</a></td> -->
 			    </tr>
 			    <tr>
-			    	<th scope="row">19</th>
+			    	<th scope="row">10</th>
 			      <td>09/12/2024</td>
-			      <td>C010</td>
-			      <td>JM</td>
-			      <td><a href="docs/slides_kernels.pdf#page=204">Green and Bochner kernels, slides 204-216, 298-314</a></td>
+			      <td style="white-space: nowrap;">Amphi E</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=217">Mercer kernels, slides 217-264</a></td> -->
 			    </tr>
 			    <tr>
-			    	<th scope="row">20</th>
-			      <td>12/12/2024</td>
-			      <td>C010</td>
-			      <td>JM</td>
-			      <td><a href="docs/slides_kernels.pdf#page=358">Kernels for biological sequences, slides 358-399, 415-433</a></td>
+			    	<th scope="row">10bis</th>
+			      <td>09/12/2024</td>
+			      <td style="white-space: nowrap;">Amphi E</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=204">Green and Bochner kernels, slides 204-216, 298-314</a></td> -->
 			    </tr>
 			    <tr>
-			    	<th scope="row">21</th>
-			      <td>16/12/2024</td>
-			      <td>C010</td>
-			      <td>JM</td>
-			      <td><a href="docs/slides_kernels.pdf#page=637">Large-scale learning with kernels, slides 637-680</a></td>
+			    	<th scope="row">11</th>
+			      <td>06/01/2024</td>
+			      <td style="white-space: nowrap;">Amphi E</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=358">Kernels for biological sequences, slides 358-399, 415-433</a></td> -->
 			    </tr>
 			    <tr>
-			    	<th scope="row">22</th>
-			      <td>19/12/2024</td>
-			      <td>C010</td>
-			      <td>JM</td>
-			      <td><a href="docs/slides_kernels.pdf#page=440">Kernels for graphs, slides 440-486</a></td>
+			    	<th scope="row">11bis</th>
+			      <td>06/01/2024</td>
+			      <td style="white-space: nowrap;">Amphi E</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=637">Large-scale learning with kernels, slides 637-680</a></td> -->
 			    </tr>
 			    <tr>
-			    <th scope="row">23</th>
-			      <td>06/01/2025</td>
-			      <td>C010</td>
-			      <td>MA</td>
+			    	<th scope="row">12</th>
+			      <td>13/01/2024</td>
+			      <td style="white-space: nowrap;">Amphi E</td>
+			      <td></td>
+				  <td></td>
+			      <!-- <td><a href="docs/slides_kernels.pdf#page=440">Kernels for graphs, slides 440-486</a></td> -->
+			    </tr>
+			    <tr>
+			    <th scope="row">12bis</th>
+			      <td>13/01/2025</td>
+			      <td style="white-space: nowrap;">Amphi E</td>
+			      <td></td>
 			      <td></td>
 			    </tr>
-			    <th scope="row">24</th>
-			      <td>09/01/2025</td>
-			      <td>C010</td>
-			      <td>MA</td>
-			      <td></td>
 			    </tr>
-				<td>End/01/2025</td>
 				<tr>
-			    	<th scope="row">#</th>
-			      <td>29/01/2025, 1pm-3pm</td>
+			    	<th scope="row">EXAM</th>
+			      <td>TBD</td>
+			      <td>TBD</td>
 			      <td></td>
-			      <td></td>
-			      <td>Exam</td>
+			      <td>Final Exam</td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -396,10 +412,11 @@
 	      <div class="col-lg-2 col-md-6">
 	            <div class="member">
 	              <div class="member-img">
-	                  <img src="imgs/teachers/pierre_gaillard.jpeg" class="img-fluid" alt="">
+	                  <img src="imgs/teachers/scott_pesme.jpeg" class="img-fluid" alt="">
 	              </div>
 	                <div class="member-info">
-	                    <h4><a href="http://pierre.gaillard.me">Pierre Gaillard</a></h4>
+	                    <h4><a href="http://scottpesme.github.io">Scott Pesme </a></h4>
+						<!-- <h4><a href="http://pierre.gaillard.me">Pierre Gaillard</a></h4> -->
 	                    <!-- <span>Inria, France</span> -->
 	                </div>
 	            </div>
