@@ -1,0 +1,130 @@
+% !TEX program = pdflatex
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
+\setlist[itemize]{leftmargin=1.2em}
+\setlist[enumerate]{leftmargin=1.2em}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\relu}{\operatorname{ReLU}}
+\title{Training a Two-Layer ReLU Network on a 1D Dataset}
+\author{ }
+\date{Due: Monday 8 December, 22:00 (by email)}
+\begin{document}
+\maketitle
+\vspace{-1.25em}
+
+
+\paragraph{Submission.}
+Email a \textbf{single \texttt{.zip}} containing (i) a PDF report (max 2 pages), (ii) a single notebook \texttt{ReLU.ipynb}, and (iii) the provided \texttt{data/} folder (unchanged) so the notebook runs end-to-end.
+Send to \texttt{scott.pesme@inria.fr} with subject:
+\emph{``Homework 1 -- [Name 1] and [Name 2 (if applicable)]''}.
+Work alone or in pairs.
+
+\section*{Dataset}
+We provide 1D train and test sets \((x_i,y_i)\) (see Figure~\ref{figure}). Train only on the training set; you may use the test test to compute a test loss.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.7\linewidth]{data.pdf}
+  \caption{Provided 1D train (red) and test (blue) samples.}
+  \label{figure}
+\end{figure}
+
+\section*{Model and Objective}
+We consider a two-layer ReLU network of width $m$ for scalar input $x\in\R$:
+\begin{equation}
+  f_{w}(x) \,=\, \frac{1}{m} \sum_{j=1}^m a_j\,\max\{0,\; b_j x + c_j\}, \quad w = \bigl((a_j,b_j,c_j)\bigr)_{j=1}^m.
+\end{equation}
+The parameters $w \in \R^{3m}$ are called the \textit{weights} of the neural network. 
+More specifically,  \((a_j)_{j=1}^m\) are the outer-layer weights and \((b_j,c_j)_{j=1}^m\) the inner-layer weights.
+
+\vspace{1em}
+
+\noindent
+Given the provided training data $\{(x_i,y_i)\}_{i=1}^n$, we will train the network by minimising the empirical square loss:
+\begin{equation}
+  L(w) \,=\, \frac{1}{2n} \sum_{i=1}^n\bigl(f_w(x_i)-y_i\bigr)^2.
+\end{equation}
+You may optionally add \emph{weight decay} (an $\ell_2$ penalty on the parameters), e.g. minimise the penalised loss $L_\lambda$:
+\begin{equation}
+  L_{\lambda}(w) \,=\, L(w) + \frac{\lambda}{2}\,\Vert w\Vert_2^2,\qquad \lambda\ge 0.
+\end{equation}
+
+\section*{Theoretical Questions (to include in the report)}
+Inside the report, the following questions should be tackled:
+\begin{enumerate}[label=\textbf{Q\arabic*.}]
+  \item Is the ReLU function $z \in \R \mapsto \max\{0,z\}$ differentiable everywhere? If not, how can one implement gradient-based methods in practice if a non-differentiable point is hit?
+  \item For the given 1D training dataset (plotted Figure \ref{figure}) and a width $m \geq 1$, does there exist weights~$w^{\star}$ that interpolate the training data, i.e. such that $f_{w^{\star}}(x_i)=y_i$ for all $i\in[n]$? If yes, provide one explicit set of parameters achieving interpolation. Is such an interpolating $w^{\star}$ unique?
+  \item Is the training loss $L$ convex? What kind of point can gradient descent be expected to converge to?
+  \item It is common to initialise the network weights randomly as follows: the outer-layer weights are drawn as $a_j \sim \mathcal{N}(0, \alpha_{\rm outer})$ for $j = 1, \dots, m$, where $\alpha_{\rm outer} \ge 0$ is called the \textit{initialisation scale of the outer layer}. Similarly, the inner-layer parameters are drawn as $b_j, c_j \sim \mathcal{N}(0, \alpha_{\rm inner})$ for $j = 1, \dots, m$, where $\alpha_{\rm inner} \ge 0$ denotes the \textit{initialisation scale of the inner layer}. What happens if we pick $\alpha_{\rm inner} = \alpha_{\rm outer} = 0$?
+
+\end{enumerate}
+
+\section*{Experiments}
+Implement both \textbf{gradient descent (GD)} and \textbf{stochastic gradient descent (SGD)} to train the network. 
+Your entire code \emph{must} be in a single notebook, \texttt{ReLU.ipynb}, and implemented from scratch 
+(\emph{e.g.}, you may use \texttt{numpy} and \texttt{matplotlib}, but \emph{not} machine-learning or autodiff libraries such as PyTorch, TensorFlow, or JAX). 
+I will run the notebook with \emph{Run All} to reproduce the figures in your report.
+
+
+\begin{center}
+    \textbf{The goal of this homework is to investigate and discuss how different design and algorithmic choices affect training.}
+\end{center}
+
+
+Below are examples of aspects you can explore (and you are encouraged to vary several at once to observe interesting phenomena). 
+You are free to choose which to investigate: you may follow items from this list, skip some, or explore additional ideas of your own. 
+For each choice you explore, clearly state what you did and show representative plots 
+(e.g.\ loss curves, predictions vs.~data, or any other quantities you find relevant). 
+Plots must be well-labelled (axes, titles, legends), and every experiment must be clearly explained. 
+Comment on what you observe: what happens, and how can it be interpreted?
+
+\noindent\textit{Important:} The aim is \textbf{not} to achieve the lowest possible test loss, 
+but to provide a clear and well-structured analysis of your observations.
+
+\medskip
+\noindent
+Here is a non-exhaustive list of possible directions to explore:
+
+
+
+\begin{enumerate}[label=\alph*)]
+  \item \textbf{GD vs.\ SGD.} Compare their behaviour.
+  \item \textbf{Initialisation scale.} Vary the initial scales $\alpha_{\rm inner}$ and $\alpha_{\rm outer}$ and study how this affects training and the learnt function.
+  \item \textbf{Freezing the inner layer.} Instead of training all the weights in both layers, initialise the network but train only the outer layer. What do you observe? How do you interpret this?
+  \item \textbf{Width of the network.} Explore the impact of the network width $m$ on the training dynamics and the learned function.
+    \item \textbf{Step size (learning rate).} Explore various choices of step sizes and describe your observations.
+  \item \textbf{Weight decay.} Observe and comment the impact of weight decay on the training dynamics and on the final predictor.
+\end{enumerate}
+
+
+\section*{Report Requirements}
+\begin{itemize}
+  \item Maximum of 2 pages (single- or double-column, as preferred). \LaTeX\ is preferred, but not mandatory.
+  \item Concise answers to the theoretical questions.
+  \item Clear experimental set-ups (i.e.\ a description of what you did).
+  \item Plots with readable labels and legends, and captions explaining the main takeaways.
+  \item A discussion of the observed behaviours.
+  \item Reproducibility: every figure in the report must be generated by running your \texttt{ReLU.ipynb} end-to-end (use a fixed random seed so that the same plots can be reproduced exactly).
+\end{itemize}
+
+
+
+\section*{What to Submit}
+\begin{enumerate}
+  \item A PDF report (maximum 2 pages).
+  \item A single notebook \texttt{ReLU.ipynb} that can be executed with “Run All” to regenerate all figures in the report.
+  \item The provided \texttt{data/} folder, so that the code runs correctly.
+\end{enumerate}
+
+
+\paragraph{Collaboration.} You may work alone or in groups of two. Write the names clearly on the first page of the report.
+
+\paragraph{Submission details.} Email before \textbf{Monday 8 December, 22:00} to \texttt{scott.pesme@inria.fr} with subject 
+\\\emph{“Homework 1 -- [Name 1] and [Name 2]”}. Attach a single \texttt{.zip} containing the PDF and \texttt{ReLU.ipynb} and the given data folder.
+
+\end{document}
